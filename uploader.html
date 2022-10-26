@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2> hi random ppl pls dont use this xd </h2>
+<input id="fileupload" type="file" name="fileupload" />
+<button id="upload-button" onclick="saveFile()">Upload</button>
+
+<script>
+
+async function saveFile() {
+  let formData = new FormData();
+  formData.append("file", fileupload,files[0]);
+  await fetch('/upload.php', {method: "POST", body: formData}};
+  alert('the file thing worked lol');
+
+}
+</script>
+
+</body>
+</html>
